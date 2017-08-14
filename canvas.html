@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #myCanvas{
+            border: 1px solid gray;
+        }
+    </style>
+</head>
+<body>
+<canvas id="myCanvas" width="800" height="800">
+    你的浏览不支持canvas，请升级浏览器！
+</canvas>
+</body>
+<script>
+    var canvas=document.getElementById('myCanvas');
+    var ctx=canvas.getContext("2d");
+//    笔触颜色
+    ctx.strokeStyle="red";
+   //填充色2
+    ctx.fillStyle="green";
+    //线条宽度
+    ctx.lineWidth=40;
+    //端点样式
+    ctx.lineCap="round";
+    //线条橡交样式
+    ctx.lineJoin="round";
+
+//    开始画线条！
+
+//    终点
+    ctx.moveTo(700,700);
+//    起点
+    ctx.lineTo(40,40);
+//    描边
+//    ctx.stroke();
+
+//    画矩形
+
+//    填充矩形
+//   ctx.fillRect(50,50,40,40);
+
+//    描边矩形
+//    ctx.strokeRect(0,0,400,400);
+
+
+//    填充圆
+//    开始路径
+    ctx.beginPath();
+    ctx.moveTo(400,400);
+//   圆弧的路径
+    ctx.arc(400,400,380,0,0.1*Math.PI,false);
+//   ctx.arc(x坐标,y坐标,半径,起始角度,终点角度,是否顺时针);
+    ctx.fill();
+//    手动填充
+//    封闭路径
+    ctx.closePath();
+//    描边
+//    ctx.stroke();
+    ctx.fillStyle="yellow";
+    ctx.strokeStyle="blue";
+    ctx.fillRect(20,20,100,100);
+    ctx.fillRect(20,120,100,100);
+    ctx.strokeRect(120,20,100,100);
+</script>
+</html>
